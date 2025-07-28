@@ -12,3 +12,24 @@ Ecco le differenze più impressionanti tra **Kubernetes** e **Docker Compose** c
 | **Auto-scaling**                    | **Auto-scaling integrato**: Kubernetes può automaticamente ridimensionare il numero di repliche dei container in base al carico, ottimizzando l'uso delle risorse. | **Nessuna funzionalità di auto-scaling**: Docker Compose non ha la capacità di scalare automaticamente i container in base alla domanda. |
 
 
+# Svantaggi di Kubernetes
+
+
+## 1. Complesso da configurare e gestire
+   - **Curva di apprendimento ripida**: Kubernetes è noto per la sua **complessità**. La sua architettura distribuita, i concetti di pod, servizi, ingressi, volumi, namespaces, ecc., richiedono tempo per essere compresi e configurati correttamente.
+   - **Gestione delle risorse**: Configurare correttamente risorse come CPU, memoria, e limiti di replica può essere complicato senza esperienza.
+   
+## 2. Overhead delle risorse
+   - **Richiede molte risorse hardware**: Kubernetes è pensato per essere eseguito su **cluster** e richiede **significative risorse** (CPU, memoria, storage) per funzionare. Per piccoli progetti o ambienti di sviluppo, questo può risultare eccessivo.
+   - **Impatto sulle prestazioni**: L’overhead aggiuntivo derivante dalla gestione dei container, dai servizi di rete, e dal controllo dell'architettura distribuita può influire sulle prestazioni.
+
+## 3. Gestione complessa del ciclo di vita dei container
+   - **Manutenzione delle versioni**: La gestione delle versioni di Kubernetes, dei suoi componenti (come `kubectl` e il server API) e dei container può diventare complessa. Gli aggiornamenti alle versioni principali possono comportare il rischio di incompatibilità.
+   - **Rollout degli aggiornamenti**: Anche se Kubernetes supporta **rolling updates**, la gestione e il monitoraggio di aggiornamenti complessi possono portare a problemi se non gestiti correttamente.
+
+## 4. Configurazione iniziale e setup
+   - **Installazione complessa**: L'installazione di Kubernetes, specialmente in un ambiente on-premises, può richiedere diversi passaggi e una configurazione complessa. Può richiedere strumenti aggiuntivi come **Helm** per gestire i pacchetti e **kubeadm** per l'installazione del cluster.
+   - **Gestione di più ambienti**: Kubernetes è pensato per essere utilizzato su cluster distribuiti, quindi gestire ambienti diversi (es. sviluppo, staging, produzione) può diventare complicato senza una strategia ben definita.
+
+## 5. Reti complicate
+   - **Gestione della rete**: Kubernetes gestisce la rete tra i container in modo molto avanzato, ma ciò può risultare **complicato** e richiede configurazioni extra per garantire la **sicurezza** e la **performance** della rete stessa.
