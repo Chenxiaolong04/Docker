@@ -11,6 +11,4 @@ Ecco le differenze più impressionanti tra **Kubernetes** e **Docker Compose** c
 | **Cluster distribuiti**             | **Supporto nativo per cluster multi-nodo**: Kubernetes è progettato per gestire container su più nodi fisici o virtuali, gestendo **l'infrastruttura distribuita**. | **Mononodo**: Docker Compose è limitato a una macchina e non è progettato per gestire più nodi. |
 | **Auto-scaling**                    | **Auto-scaling integrato**: Kubernetes può automaticamente ridimensionare il numero di repliche dei container in base al carico, ottimizzando l'uso delle risorse. | **Nessuna funzionalità di auto-scaling**: Docker Compose non ha la capacità di scalare automaticamente i container in base alla domanda. |
 
-## In sintesi "wow":
-- Kubernetes ti permette di scalare e gestire **applicazioni globali e distribuite**, con **alta disponibilità** e **failover automatico**.
-- Docker Compose è fantastico per **sviluppo locale**, ma non ha **scalabilità** o **resilienza** a livello di produzione.
+
